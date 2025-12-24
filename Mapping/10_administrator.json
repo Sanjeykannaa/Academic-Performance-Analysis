@@ -1,0 +1,54 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "fullName": {
+          "type": "text",
+          "fields": {
+            "sortable": {
+              "type": "keyword",
+              "ignore_above": 30000,
+              "normalizer": "case_insensitive"
+            },
+            "untouched": {
+              "type": "keyword"
+            },
+            "keyword": {
+              "type": "keyword"
+            }
+          },
+          "analyzer": "standard"
+        },
+        "userName": {
+          "type": "keyword"
+        },
+        "email": {
+          "type": "text",
+          "fields": {
+            "sortable": {
+              "type": "keyword",
+              "ignore_above": 30000,
+              "normalizer": "case_insensitive"
+            },
+            "untouched": {
+              "type": "keyword"
+            }
+          },
+          "analyzer": "standard"
+        },
+        "phno": {
+          "type": "long"
+        },
+        "password": {
+          "type": "keyword"
+        },
+        "updationDate": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

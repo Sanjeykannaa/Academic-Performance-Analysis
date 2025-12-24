@@ -1,0 +1,56 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "studentId": {
+          "type": "integer"
+        },
+        "studentName": {
+          "type": "text",
+          "fields": {
+            "sortable": {
+              "type": "keyword",
+              "ignore_above": 30000,
+              "normalizer": "case_insensitive"
+            },
+            "untouched": {
+              "type": "keyword"
+            },
+            "keyword": {
+              "type": "keyword"
+            },
+            "suggest": {
+              "type": "completion"
+            }
+          },
+          "analyzer": "standard"
+        },
+        "rollId": {
+          "type": "keyword"
+        },
+        "studentEmail": {
+          "type": "text",
+          "fields": {
+            "sortable": {
+              "type": "keyword",
+              "ignore_above": 30000,
+              "normalizer": "case_insensitive"
+            },
+            "untouched": {
+              "type": "keyword"
+            }
+          },
+          "analyzer": "standard"
+        },
+        "classId": {
+          "type": "integer"
+        },
+        "className": {
+          "type": "keyword"
+        },
+        "passedOutYear": {
+          "type": "integer"
+        }
+      }
+    }
+  }

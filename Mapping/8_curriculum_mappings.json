@@ -1,0 +1,42 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "classId": {
+          "type": "integer"
+        },
+        "className": {
+          "type": "keyword"
+        },
+        "subjectId": {
+          "type": "integer"
+        },
+        "subjectName": {
+          "type": "keyword"
+        },
+        "subjectCode": {
+          "type": "keyword"
+        },
+        "semester": {
+          "type": "integer"
+        },
+        "credit": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "integer"
+        },
+        "creationDate": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        },
+        "updationDate": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

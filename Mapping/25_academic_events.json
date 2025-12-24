@@ -1,0 +1,50 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "eventId": {
+          "type": "keyword"
+        },
+        "eventType": {
+          "type": "keyword"
+        },
+        "studentId": {
+          "type": "integer"
+        },
+        "classId": {
+          "type": "integer"
+        },
+        "subjectId": {
+          "type": "integer"
+        },
+        "eventDate": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        },
+        "description": {
+          "type": "text",
+          "fields": {
+            "sortable": {
+              "type": "keyword",
+              "ignore_above": 30000,
+              "normalizer": "case_insensitive"
+            },
+            "untouched": {
+              "type": "keyword"
+            }
+          },
+          "analyzer": "standard"
+        },
+        "academicYear": {
+          "type": "integer"
+        },
+        "semester": {
+          "type": "integer"
+        },
+        "metadata": {
+          "type": "object",
+          "enabled": true
+        }
+      }
+    }
+  }

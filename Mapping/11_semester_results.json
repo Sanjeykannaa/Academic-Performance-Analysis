@@ -1,0 +1,59 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "studentId": {
+          "type": "integer"
+        },
+        "studentName": {
+          "type": "keyword"
+        },
+        "rollId": {
+          "type": "keyword"
+        },
+        "classId": {
+          "type": "integer"
+        },
+        "semester": {
+          "type": "integer"
+        },
+        "academicYear": {
+          "type": "integer"
+        },
+        "subjects": {
+          "type": "nested",
+          "dynamic": "false",
+          "properties": {
+            "subjectId": {
+              "type": "integer"
+            },
+            "subjectName": {
+              "type": "keyword"
+            },
+            "subjectCode": {
+              "type": "keyword"
+            },
+            "marks": {
+              "type": "keyword"
+            },
+            "grades": {
+              "type": "integer"
+            },
+            "credit": {
+              "type": "integer"
+            }
+          }
+        },
+        "semesterGPA": {
+          "type": "float"
+        },
+        "totalCredits": {
+          "type": "integer"
+        },
+        "lastUpdated": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

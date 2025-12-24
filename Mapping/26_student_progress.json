@@ -1,0 +1,48 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "studentId": {
+          "type": "integer"
+        },
+        "studentName": {
+          "type": "keyword"
+        },
+        "rollId": {
+          "type": "keyword"
+        },
+        "classId": {
+          "type": "integer"
+        },
+        "progressHistory": {
+          "type": "nested",
+          "dynamic": "false",
+          "properties": {
+            "semester": {
+              "type": "integer"
+            },
+            "gpa": {
+              "type": "float"
+            },
+            "cgpa": {
+              "type": "float"
+            },
+            "rank": {
+              "type": "integer"
+            },
+            "date": {
+              "type": "date",
+              "format": "yyyy-MM-dd HH:mm:ss"
+            }
+          }
+        },
+        "trend": {
+          "type": "keyword"
+        },
+        "lastUpdated": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

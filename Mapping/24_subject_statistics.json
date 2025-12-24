@@ -1,0 +1,53 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "subjectId": {
+          "type": "integer"
+        },
+        "subjectName": {
+          "type": "keyword"
+        },
+        "subjectCode": {
+          "type": "keyword"
+        },
+        "semester": {
+          "type": "integer"
+        },
+        "credit": {
+          "type": "integer"
+        },
+        "statistics": {
+          "type": "nested",
+          "dynamic": "false",
+          "properties": {
+            "totalStudents": {
+              "type": "integer"
+            },
+            "averageGrade": {
+              "type": "float"
+            },
+            "medianGrade": {
+              "type": "float"
+            },
+            "passRate": {
+              "type": "float"
+            },
+            "failRate": {
+              "type": "float"
+            },
+            "standardDeviation": {
+              "type": "float"
+            }
+          }
+        },
+        "academicYear": {
+          "type": "integer"
+        },
+        "lastUpdated": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

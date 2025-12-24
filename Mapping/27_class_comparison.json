@@ -1,0 +1,53 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "comparisonId": {
+          "type": "keyword"
+        },
+        "classId1": {
+          "type": "integer"
+        },
+        "className1": {
+          "type": "keyword"
+        },
+        "classId2": {
+          "type": "integer"
+        },
+        "className2": {
+          "type": "keyword"
+        },
+        "metrics": {
+          "type": "nested",
+          "dynamic": "false",
+          "properties": {
+            "averageCGPA1": {
+              "type": "float"
+            },
+            "averageCGPA2": {
+              "type": "float"
+            },
+            "passRate1": {
+              "type": "float"
+            },
+            "passRate2": {
+              "type": "float"
+            },
+            "difference": {
+              "type": "float"
+            }
+          }
+        },
+        "academicYear": {
+          "type": "integer"
+        },
+        "semester": {
+          "type": "integer"
+        },
+        "lastUpdated": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

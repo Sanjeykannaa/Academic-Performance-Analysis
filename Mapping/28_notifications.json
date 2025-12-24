@@ -1,0 +1,61 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "notificationId": {
+          "type": "keyword"
+        },
+        "recipientType": {
+          "type": "keyword"
+        },
+        "recipientId": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "text",
+          "fields": {
+            "sortable": {
+              "type": "keyword",
+              "ignore_above": 30000,
+              "normalizer": "case_insensitive"
+            },
+            "untouched": {
+              "type": "keyword"
+            }
+          },
+          "analyzer": "standard"
+        },
+        "message": {
+          "type": "text",
+          "fields": {
+            "sortable": {
+              "type": "keyword",
+              "ignore_above": 30000,
+              "normalizer": "case_insensitive"
+            },
+            "untouched": {
+              "type": "keyword"
+            }
+          },
+          "analyzer": "standard"
+        },
+        "type": {
+          "type": "keyword"
+        },
+        "priority": {
+          "type": "keyword"
+        },
+        "read": {
+          "type": "boolean"
+        },
+        "createdDate": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        },
+        "expiryDate": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

@@ -1,0 +1,47 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "facultyId": {
+          "type": "integer"
+        },
+        "facultyName": {
+          "type": "keyword"
+        },
+        "facultyCode": {
+          "type": "keyword"
+        },
+        "totalClasses": {
+          "type": "integer"
+        },
+        "totalSubjects": {
+          "type": "integer"
+        },
+        "classes": {
+          "type": "nested",
+          "dynamic": "false",
+          "properties": {
+            "classId": {
+              "type": "integer"
+            },
+            "className": {
+              "type": "keyword"
+            },
+            "subjectId": {
+              "type": "integer"
+            },
+            "subjectName": {
+              "type": "keyword"
+            }
+          }
+        },
+        "academicYear": {
+          "type": "integer"
+        },
+        "lastUpdated": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }
