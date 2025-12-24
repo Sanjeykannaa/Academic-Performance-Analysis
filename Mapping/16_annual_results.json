@@ -1,0 +1,44 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "academicYear": {
+          "type": "integer"
+        },
+        "studentId": {
+          "type": "integer"
+        },
+        "studentName": {
+          "type": "keyword"
+        },
+        "classId": {
+          "type": "integer"
+        },
+        "className": {
+          "type": "keyword"
+        },
+        "yearCGPA": {
+          "type": "float"
+        },
+        "totalCredits": {
+          "type": "integer"
+        },
+        "semesters": {
+          "type": "nested",
+          "dynamic": "false",
+          "properties": {
+            "semester": {
+              "type": "integer"
+            },
+            "gpa": {
+              "type": "float"
+            }
+          }
+        },
+        "lastUpdated": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

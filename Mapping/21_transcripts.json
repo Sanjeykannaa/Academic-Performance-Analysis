@@ -1,0 +1,65 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "studentId": {
+          "type": "integer"
+        },
+        "studentName": {
+          "type": "keyword"
+        },
+        "rollId": {
+          "type": "keyword"
+        },
+        "className": {
+          "type": "keyword"
+        },
+        "passedOutYear": {
+          "type": "integer"
+        },
+        "overallCGPA": {
+          "type": "float"
+        },
+        "semesterResults": {
+          "type": "nested",
+          "dynamic": "false",
+          "properties": {
+            "semester": {
+              "type": "integer"
+            },
+            "gpa": {
+              "type": "float"
+            },
+            "subjects": {
+              "type": "nested",
+              "dynamic": "false",
+              "properties": {
+                "subjectName": {
+                  "type": "keyword"
+                },
+                "subjectCode": {
+                  "type": "keyword"
+                },
+                "credit": {
+                  "type": "integer"
+                },
+                "grade": {
+                  "type": "keyword"
+                },
+                "gradePoints": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "totalCredits": {
+          "type": "integer"
+        },
+        "lastUpdated": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

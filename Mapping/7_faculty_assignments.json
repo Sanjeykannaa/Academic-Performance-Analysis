@@ -1,0 +1,45 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "facultyId": {
+          "type": "integer"
+        },
+        "facultyName": {
+          "type": "keyword"
+        },
+        "facultyCode": {
+          "type": "keyword"
+        },
+        "classId": {
+          "type": "integer"
+        },
+        "className": {
+          "type": "keyword"
+        },
+        "subjectId": {
+          "type": "integer"
+        },
+        "subjectName": {
+          "type": "keyword"
+        },
+        "subjectCode": {
+          "type": "keyword"
+        },
+        "status": {
+          "type": "integer"
+        },
+        "creationDate": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        },
+        "updationDate": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

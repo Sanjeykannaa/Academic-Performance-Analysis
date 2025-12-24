@@ -1,0 +1,48 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "reportId": {
+          "type": "keyword"
+        },
+        "reportType": {
+          "type": "keyword"
+        },
+        "reportName": {
+          "type": "text",
+          "fields": {
+            "sortable": {
+              "type": "keyword",
+              "ignore_above": 30000,
+              "normalizer": "case_insensitive"
+            },
+            "untouched": {
+              "type": "keyword"
+            }
+          },
+          "analyzer": "standard"
+        },
+        "parameters": {
+          "type": "object",
+          "enabled": true
+        },
+        "generatedBy": {
+          "type": "integer"
+        },
+        "generatedDate": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        },
+        "filePath": {
+          "type": "keyword"
+        },
+        "status": {
+          "type": "keyword"
+        },
+        "metadata": {
+          "type": "object",
+          "enabled": true
+        }
+      }
+    }
+  }

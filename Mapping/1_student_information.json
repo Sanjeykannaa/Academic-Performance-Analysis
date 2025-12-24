@@ -1,0 +1,71 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "studentId": {
+          "type": "integer"
+        },
+        "studentName": {
+          "type": "text",
+          "fields": {
+            "sortable": {
+              "type": "keyword",
+              "ignore_above": 30000,
+              "normalizer": "case_insensitive"
+            },
+            "untouched": {
+              "type": "keyword"
+            },
+            "keyword": {
+              "type": "keyword"
+            }
+          },
+          "analyzer": "standard"
+        },
+        "rollId": {
+          "type": "keyword"
+        },
+        "studentEmail": {
+          "type": "text",
+          "fields": {
+            "sortable": {
+              "type": "keyword",
+              "ignore_above": 30000,
+              "normalizer": "case_insensitive"
+            },
+            "untouched": {
+              "type": "keyword"
+            }
+          },
+          "analyzer": "standard"
+        },
+        "gender": {
+          "type": "keyword"
+        },
+        "dob": {
+          "type": "date",
+          "format": "dd-MM-yy||yyyy-MM-dd"
+        },
+        "classId": {
+          "type": "integer"
+        },
+        "className": {
+          "type": "keyword"
+        },
+        "section": {
+          "type": "keyword"
+        },
+        "passedOutYear": {
+          "type": "integer"
+        },
+        "regDate": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        },
+        "updationDate": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

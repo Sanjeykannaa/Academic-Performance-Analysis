@@ -1,0 +1,50 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "studentId": {
+          "type": "integer"
+        },
+        "studentName": {
+          "type": "keyword"
+        },
+        "rollId": {
+          "type": "keyword"
+        },
+        "classId": {
+          "type": "integer"
+        },
+        "className": {
+          "type": "keyword"
+        },
+        "totalSubjects": {
+          "type": "integer"
+        },
+        "totalMarks": {
+          "type": "float"
+        },
+        "averageGrade": {
+          "type": "float"
+        },
+        "cgpa": {
+          "type": "float"
+        },
+        "passedSubjects": {
+          "type": "integer"
+        },
+        "failedSubjects": {
+          "type": "integer"
+        },
+        "academicYear": {
+          "type": "integer"
+        },
+        "semester": {
+          "type": "integer"
+        },
+        "lastUpdated": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

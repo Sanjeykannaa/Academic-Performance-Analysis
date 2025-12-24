@@ -1,0 +1,48 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "studentId": {
+          "type": "integer"
+        },
+        "studentName": {
+          "type": "keyword"
+        },
+        "rollId": {
+          "type": "keyword"
+        },
+        "classId": {
+          "type": "integer"
+        },
+        "className": {
+          "type": "keyword"
+        },
+        "subjectId": {
+          "type": "integer"
+        },
+        "subjectName": {
+          "type": "keyword"
+        },
+        "subjectCode": {
+          "type": "keyword"
+        },
+        "marks": {
+          "type": "keyword"
+        },
+        "grades": {
+          "type": "integer"
+        },
+        "postingDate": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        },
+        "updationDate": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

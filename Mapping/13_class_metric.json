@@ -1,0 +1,50 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "classId": {
+          "type": "integer"
+        },
+        "className": {
+          "type": "keyword"
+        },
+        "section": {
+          "type": "keyword"
+        },
+        "totalStudents": {
+          "type": "integer"
+        },
+        "averageCGPA": {
+          "type": "float"
+        },
+        "classAverageGrade": {
+          "type": "float"
+        },
+        "topPerformer": {
+          "type": "nested",
+          "dynamic": "false",
+          "properties": {
+            "studentId": {
+              "type": "integer"
+            },
+            "studentName": {
+              "type": "keyword"
+            },
+            "cgpa": {
+              "type": "float"
+            }
+          }
+        },
+        "academicYear": {
+          "type": "integer"
+        },
+        "semester": {
+          "type": "integer"
+        },
+        "lastUpdated": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

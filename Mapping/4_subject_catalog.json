@@ -1,0 +1,44 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "subjectName": {
+          "type": "text",
+          "fields": {
+            "sortable": {
+              "type": "keyword",
+              "ignore_above": 30000,
+              "normalizer": "case_insensitive"
+            },
+            "untouched": {
+              "type": "keyword"
+            },
+            "keyword": {
+              "type": "keyword"
+            }
+          },
+          "analyzer": "standard"
+        },
+        "subjectCode": {
+          "type": "keyword"
+        },
+        "credit": {
+          "type": "integer"
+        },
+        "semester": {
+          "type": "integer"
+        },
+        "creationDate": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        },
+        "updationDate": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

@@ -1,0 +1,53 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "studentId": {
+          "type": "integer"
+        },
+        "studentName": {
+          "type": "keyword"
+        },
+        "rollId": {
+          "type": "keyword"
+        },
+        "classId": {
+          "type": "integer"
+        },
+        "className": {
+          "type": "keyword"
+        },
+        "failedSubjects": {
+          "type": "nested",
+          "dynamic": "false",
+          "properties": {
+            "subjectId": {
+              "type": "integer"
+            },
+            "subjectName": {
+              "type": "keyword"
+            },
+            "subjectCode": {
+              "type": "keyword"
+            },
+            "grade": {
+              "type": "keyword"
+            },
+            "semester": {
+              "type": "integer"
+            }
+          }
+        },
+        "totalFailedSubjects": {
+          "type": "integer"
+        },
+        "academicYear": {
+          "type": "integer"
+        },
+        "lastUpdated": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }

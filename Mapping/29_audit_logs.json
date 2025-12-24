@@ -1,0 +1,40 @@
+{
+    "mappings": {
+      "dynamic": "false",
+      "properties": {
+        "logId": {
+          "type": "keyword"
+        },
+        "userId": {
+          "type": "integer"
+        },
+        "userType": {
+          "type": "keyword"
+        },
+        "action": {
+          "type": "keyword"
+        },
+        "entityType": {
+          "type": "keyword"
+        },
+        "entityId": {
+          "type": "integer"
+        },
+        "oldValue": {
+          "type": "object",
+          "enabled": true
+        },
+        "newValue": {
+          "type": "object",
+          "enabled": true
+        },
+        "ipAddress": {
+          "type": "ip"
+        },
+        "timestamp": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }
